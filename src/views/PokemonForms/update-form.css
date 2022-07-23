@@ -1,0 +1,54 @@
+.form-dialog {
+    border: 2px solid var(--color-gray-light);
+    background-color: var(--color-white);
+    padding: 16px 20px;
+
+}
+
+.form-dialog .title {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.form-dialog form .form-fields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.form-dialog form .form-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    margin-top: 22px;
+}
+
+.form-dialog form .element {
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.form-dialog form .element label {
+    margin-right: 8px;
+}
+
+.form-dialog form .element input {
+    color: var(--color-text);
+    outline: var(--color-gray-dark);
+    border: 2px solid var(--color-gray-light);
+    border-radius: 2px;
+    padding: 2px 4px;
+}
+
+.form-dialog form .element input[type="text"]::placeholder {
+    color: var(--color-placeholders);
+}
+
+.form-dialog form .element input[type="text"].input-error {
+    border: 2px solid var(--color-status-error);
+}
+
+.form-dialog form img.thumbnail {
+    height: 80px;
+    object-fit: cover;
+}

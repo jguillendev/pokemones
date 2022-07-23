@@ -1,0 +1,31 @@
+table td {
+    padding: 4px 6px;
+    border-left: 2px solid var(--color-gray-light);
+    border-bottom: 2px solid var(--color-gray-light);
+}
+
+table td:last-child {
+    border-right: 2px solid var(--color-gray-light);
+}
+
+img.photo.thumbnail {
+    height: 16px;
+    object-fit: cover;
+}
+
+td div.actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+td div.actions svg{
+    width: 16px;
+    height: 16px;
+    cursor:pointer;
+    transition: all .2s ease-in-out;
+}
+
+td div.actions svg:hover {
+    transform: scale(1.25);
+    stroke: var(--color-primary);
+}
