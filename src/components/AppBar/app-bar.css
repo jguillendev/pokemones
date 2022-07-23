@@ -1,0 +1,13 @@
+.app-bar {
+    display: flex;
+    background-color: var(--color-gray-default);
+    padding: 8px;
+}
+
+.app-bar .b-circle {
+    min-height: 12px;
+    min-width: 12px;
+    border-radius: 100%;
+    background-color: var(--color-gray-dark);
+    margin-right: 6px;
+}
