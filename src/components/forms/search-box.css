@@ -1,0 +1,40 @@
+.search-box {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    border: 2px solid var(--color-gray-light);
+    border-radius: 2px;
+    background-color: var(--color-white);
+    height: var(--input-height);
+    padding: 0 8px;
+    width: 132px;
+}
+
+.search-box input {
+    border: 0;
+    outline: none;
+    color: var(--color-text);
+    background-color: var(--color-white);
+    max-width: 105px;
+}
+.search-box input:hover { 
+    outline: none;
+}
+.search-box input:active {
+    outline: none;
+}
+.search-box input:focus {
+    outline:none;
+}
+.search-box input::placeholder {
+    color: var(--color-placeholders);
+}
+
+.search-box svg {
+    height: 12px;
+    width: 12px;
+    margin-right: 8px;
+    stroke-width: 3px;
+    stroke: var(--color-gray-default);
+}
