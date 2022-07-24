@@ -1,5 +1,5 @@
 import { useSetRecoilState } from "recoil";
-import { SearchBox } from './forms/SearchBox';
+import SearchBox from './forms/SearchBox';
 import { AddIcon } from './icons/AddIcon';
 import ActionButton from './forms/ActionButton';
 import './toolbar.css';

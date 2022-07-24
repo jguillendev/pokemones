@@ -3,7 +3,7 @@
 import { render } from '@testing-library/react';
 import AppBar from './AppBar';
 
-test('testing Admin Page', async () => {
+test('testing AppBar', async () => {
     const {container} = render(    
         <AppBar />
     );
