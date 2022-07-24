@@ -1,5 +1,5 @@
 import React, { createRef, FormEvent, useState } from "react";
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { showForm } from "../../shared/states/showForm.state";
 import InputRange from "../../components/forms/InputRange";
 import { ICreatePokemon } from "../../core/services/interfaces/ICreatePokemon";
@@ -7,11 +7,11 @@ import { PokemonService } from "../../core/services/PokemonService";
 import settings from "../../core/settings";
 import { pokemonList, pokemonFilteredList } from "../../shared/states/pokemonList.state";
 import { pokemon } from "../../core/types/pokemon.type";
-import "./update-form.css";
 import ActionButton from "../../components/forms/ActionButton";
 import { CancelIcon } from "../../components/icons/CancelIcon";
 import SubmitButton from "../../components/forms/SubmitButton";
 import { SaveIcon } from "../../components/icons/SaveIcon";
+import "./update-form.css";
 
 export default function PokemonCreateForm(){
 
@@ -30,10 +30,10 @@ export default function PokemonCreateForm(){
     
         const {success, data} = checkPayload();
         if(success === true){
-            console.log("creating:data: ", data);
+         
             const service = new PokemonService(settings, 1);
             const result = await service.createAsync(data);
-            console.log("create:Result: ", result);
+
             if(result.created){
                 //actaulizando la lista de items
                 updateList([
@@ -81,7 +81,6 @@ export default function PokemonCreateForm(){
     }
 
     const onInputChange = (el:React.FormEvent<HTMLInputElement>) =>{
-        console.log("onChange:name: ", el.currentTarget.value);
         checkPayload();
     }
 

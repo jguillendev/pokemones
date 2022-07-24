@@ -4,7 +4,7 @@ import { SearchIcon } from "../icons/SearchIcon"
 interface ISearchBox {
     onChange: (text:string) => void;
 }
-export const SearchBox = ({onChange}:ISearchBox) =>{
+export default function SearchBox({onChange}:ISearchBox){
 
     const handleChange = (el:React.FormEvent<HTMLInputElement>) => {
         onChange(el.currentTarget.value);
