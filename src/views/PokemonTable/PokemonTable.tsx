@@ -16,8 +16,6 @@ export default function PokemonTable(){
     const setPokemonId = useSetRecoilState(pokemonSelected); 
     const data = useRecoilValue<Array<pokemon>>(pokemonFilteredList);
 
-    console.log("table:data: ", data);
-
     const editHandler = (id:number) =>{
         setForm('update');
         setPokemonId(id);

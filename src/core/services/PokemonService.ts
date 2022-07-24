@@ -87,7 +87,6 @@ export class PokemonService extends ServiceBase {
         })
         .then(result => result.json())
         .then(data => {
-            console.log("updated:result: ", data);
             return {
                 updated:true,
                 data: {

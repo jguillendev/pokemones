@@ -20,7 +20,6 @@ export const useHttpRequest = <R,T>({url, auto=true }:IRequest): HookHttpRequest
     
     const onData = async (result:any) => {
         const data =  await result.json();
-        console.log("useHttpRequest:onData:result ",  result);
         if(result.status !== 200)
         onError(data);
         else
