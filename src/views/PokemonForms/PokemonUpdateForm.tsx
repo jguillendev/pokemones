@@ -70,7 +70,7 @@ export default function PokemonUpdateForm({id}:IUpdatePokemonForm){
        
         const {success, data} = checkPayload();
         if(success === true){
-            console.log("creating:data: ", data);
+
             const service = new PokemonService(settings, 1);
             const result = await service.updateAsync(id, data);
             if(result.updated){
@@ -118,7 +118,6 @@ export default function PokemonUpdateForm({id}:IUpdatePokemonForm){
     }
 
     const onInputChange = (el:React.FormEvent<HTMLInputElement>) =>{
-        console.log("onChange:name: ", el.currentTarget.value);
         checkPayload();
     }
 

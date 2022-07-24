@@ -6,11 +6,11 @@ import settings from "../../core/settings";
 import { pokemon } from "../../core/types/pokemon.type";
 import { pokemonFilteredList, pokemonList } from "../../shared/states/pokemonList.state";
 import { showForm } from "../../shared/states/showForm.state";
-import "./update-form.css";
 import ActionButton from "../../components/forms/ActionButton";
 import { CancelIcon } from "../../components/icons/CancelIcon";
 import SubmitButton from "../../components/forms/SubmitButton";
 import { RemoveIcon } from "../../components/icons/RemoveIcon";
+import "./update-form.css";
 
 interface IDeletePokemonForm {
     id: number;
