@@ -26,6 +26,11 @@ export default function PokemonTable(){
         setPokemonId(id);
     }
 
+    const onImageHandler = (id:number) => {
+        setForm('image');
+        setPokemonId(id);
+    }
+
     return <table cellSpacing={0}>
         <thead>
             <tr className="text black small bold">
@@ -39,7 +44,9 @@ export default function PokemonTable(){
         <tbody>
             {
                 data && data.length >= 1 && data.map((item:pokemon) => {
-                    return <PokemonTableItem key={item.id} data={item} onEdit={editHandler} onDelete={deleteHandler}/>
+                    return <PokemonTableItem key={item.id} data={item} onEdit={editHandler} 
+                    onImageSelect={onImageHandler}
+                    onDelete={deleteHandler}/>
                 })
             }
         </tbody>
