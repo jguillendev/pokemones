@@ -7,9 +7,10 @@ interface IPokemonTableItemProps {
     data: pokemon;
     onEdit: (id: number) => void;
     onDelete: (id: number) => void;
+    onImageSelect: (id: number) => void;
 }
 
-export default function PokemonTableItem({data, onEdit, onDelete}:IPokemonTableItemProps){
+export default function PokemonTableItem({data, onImageSelect, onEdit, onDelete}:IPokemonTableItemProps){
 
     const onEditHandler = () =>{
         onEdit(data.id);
@@ -19,10 +20,16 @@ export default function PokemonTableItem({data, onEdit, onDelete}:IPokemonTableI
         onDelete(data.id);
     }
 
+    const onImageHandler = () =>{
+        onImageSelect(data.id);
+    }
+
     return <tr className="text small">
         <td>{data.name}</td>
         <td>
-            <img className="photo thumbnail" src={data.image} alt={data.name} />
+            <img className="photo thumbnail" 
+            onClick={onImageHandler}
+            src={data.image} alt={data.name} />
         </td>
         <td>{data.attack}</td>
         <td>{data.defense}</td>
