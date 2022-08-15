@@ -52,3 +52,18 @@
     height: 80px;
     object-fit: cover;
 }
+
+.form-dialog.full {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: (--color-gray-dark);
+}

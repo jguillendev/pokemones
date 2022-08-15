@@ -13,6 +13,7 @@ import { PokemonService } from "../core/services/PokemonService";
 import settings from "../core/settings";
 import { pokemonList } from "../shared/states/pokemonList.state";
 import PokemonDeleteForm from "../views/PokemonForms/PokemonDeleteForm";
+import PokeView from "../views/PokemonForms/PokeView";
 import "./pages.css";
 
 
@@ -43,6 +44,7 @@ export default function AdminPage(){
             { displayForm === 'create' && <PokemonCreateForm /> }
             { displayForm === 'update' && <PokemonUpdateForm id={selectedPokemonId} /> }
             { displayForm === 'delete' && <PokemonDeleteForm id={selectedPokemonId} /> }
+            { displayForm === 'image' && <PokeView id={selectedPokemonId}/> }
         </PageContainer>
     </div>
 }
