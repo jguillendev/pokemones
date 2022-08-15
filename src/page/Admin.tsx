@@ -44,7 +44,6 @@ export default function AdminPage(){
             { displayForm === 'create' && <PokemonCreateForm /> }
             { displayForm === 'update' && <PokemonUpdateForm id={selectedPokemonId} /> }
             { displayForm === 'delete' && <PokemonDeleteForm id={selectedPokemonId} /> }
-
             { displayForm === 'image' && <PokeView id={selectedPokemonId}/> }
         </PageContainer>
     </div>
